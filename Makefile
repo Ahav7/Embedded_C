@@ -1,4 +1,4 @@
-PROJ_NAME = SeatHeatingApp
+PROJ_NAME = SeatHeatApp
 
 BUILD_DIR = Build
 

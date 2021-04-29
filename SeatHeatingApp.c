@@ -1,7 +1,7 @@
 /**
  * @file SeatHeatingApp.c
  * @author
- * @brief Heat Seating Application to set Temperature of seat
+ * @brief Seat Heating Application to maintain Temperature of seat
  * @version 0.1
  * @date 2021-04-29
  * 
@@ -20,20 +20,25 @@ int main(void)
     
     while(1)
     {
-        if(activity1_LED()==1) //Check if both the switches are pressed
+	    /* Check if both switches are high*/
+        if(activity1_LED()==1) 
         {
-           
-            TurnLED_ON();//Turn LED ON
-            temp=activity2_GetADC(); //Get the ADC value
-            activity3_PWM(temp); //PWM output based on temperature
-		    activity4_USARTWrite(temp); //To Serial monitor to print Temperature
+            /*if switches are high then led is set to be high*/
+            TurnLED_ON();
+	    /* Get the ADC value*/
+            temp=activity2_GetADC();
+	    /* PWM based on the temperature*/
+            activity3_PWM(temp); 
+	   /* Using UART protocol to print temperature on srial monitor*/
+            activity4_USARTWrite(temp);
             
 
         }
-        else  //in all other cases
+	    /* If both the switches are not high led is in low state*/
+        else  
         {
-            TurnLED_OFF();//Turn LED OFF
-		    _delay_ms(500);
+            TurnLED_OFF();
+		    _delay_ms(1000);
         }
 
     }

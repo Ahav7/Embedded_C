@@ -17,6 +17,10 @@ INC = -I inc
 
 AVRDUDE := avrdude
 
+#Object copy to create hexfile
+
+OBJCOPY = avr-objcopy.exe
+
 #Options for HEX file generation
 
 HFLAGS = -j .text -j .data -O ihex
@@ -81,7 +85,7 @@ hex: $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).elf)
 
 	#create hex file
 
-	$(AVR_OBJ_CPY) $(HFLAGS) $< $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).hex)
+	$(OBJCOPY) $(HFLAGS) $< $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).hex)
 
 $(BUILD_DIR):
 
@@ -108,6 +112,8 @@ clean:
 	rm -rf Build
 
 	make -C documentation clean
+	
+	rmdir $(BUILD_DIR)
 
 #rmdir $(BUILD_DIR)
 

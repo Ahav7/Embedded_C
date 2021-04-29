@@ -12,19 +12,14 @@
 
 #include "activity1.h"
 
-/* Peripheral state*/
+
 void peripheral_init(void)
 {	
-    /* PD2 high for Led	
-    DDRD |= (1<<PD2); 
-    /* Clearing the PD0
-    DDRD &= ~(1<<PD0);
-    /*Making High for seatbutton*/
-    PORTD |= (1<<PD0); 
-    /* Clearing the PD1
-    DDRD &= ~(1<<PD1); 
-    /*Making High for heater*/
-    PORTD |= (1<<PD1); 
+	DDRD |= (1<<PD2); // set PD2=1 for LED
+    DDRD &= ~(1<<PD0); //clear bit
+    PORTD |= (1<<PD0); //set bit PD0 for SeatSwitch
+    DDRD &= ~(1<<PD1); //clear bit
+    PORTD |= (1<<PD1); //set bit PD0 for HeaterSwitch
 }
 
 void TurnLED_ON(){
@@ -39,13 +34,11 @@ int act1=0;
 int activity1_LED(void)
 {
        peripheral_init();
-	/* if both the buttons are high the led is high*/
-        if(!(PIND&(1<<BUTTON_SENSOR )) && !(PIND&(1<<TEMP_SENSOR))) 
+        if(!(PIND&(1<<BUTTON_SENSOR )) && !(PIND&(1<<TEMP_SENSOR))) //both the switches are pressed
         { 
             act1=1;
         }
-	/*rest cases led is low*/
-        else 
+        else  //in all other cases
         {
             act1=0;
         }

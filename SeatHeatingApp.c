@@ -1,9 +1,9 @@
 /**
- * @file SeatHeating.c
+ * @file SeatHeatingApp.c
  * @author
  * @brief Heat Seating Application to set Temperature of seat
  * @version 0.1
- * @date 2021-04-23
+ * @date 2021-04-29
  * 
  * @copyright Copyright (c) 2021
  * 
@@ -33,7 +33,7 @@ int main(void)
         else  //in all other cases
         {
             TurnLED_OFF();//Turn LED OFF
-		    _delay_ms(200);
+		    _delay_ms(500);
         }
 
     }

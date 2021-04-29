@@ -1,6 +1,6 @@
 /**
  * @file SeatHeatingApp.c
- * @author
+ * @author Hemanth
  * @brief Seat Heating Application to maintain Temperature of seat
  * @version 0.1
  * @date 2021-04-29

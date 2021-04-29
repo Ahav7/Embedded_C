@@ -1,1 +1,1 @@
-## @mainpage Seat Heating Application by Hemanth
+### @mainpage Seat Heating Application by Hemanth

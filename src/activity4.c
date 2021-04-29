@@ -30,11 +30,6 @@ int USARTRead()
 
 void activity4_USARTWrite(uint16_t temp)
 {
-    unsigned char data1[]="Temperature: 20 degree C\n";
-    unsigned char data2[]="Temperature: 25 degree C\n";
-    unsigned char data3[]="Temperature: 29 degree C\n";
-    unsigned char data4[]="Temperature: 33 degree C\n";
-    unsigned char data5[]="Temperature: 0 degree C\n";
     int i=0;
         if(temp>=0 && temp<=200){
             i=0;
@@ -43,7 +38,7 @@ void activity4_USARTWrite(uint16_t temp)
             UDR0 = data1[i];        // Put data into buffer, sends the data
             i++;
             }
-            _delay_ms(2000);
+            _delay_ms(1000);
         }
         else if(temp>=210 && temp<=500){
             i=0;
@@ -52,7 +47,7 @@ void activity4_USARTWrite(uint16_t temp)
             UDR0 = data2[i];        // Put data into buffer, sends the data
             i++;
             }
-            _delay_ms(2000);
+            _delay_ms(1000);
         }
         else if(temp>=510 && temp<=700){        
             i=0;
@@ -61,7 +56,7 @@ void activity4_USARTWrite(uint16_t temp)
             UDR0 = data3[i];        // Put data into buffer, sends the data
             i++;
             }
-            _delay_ms(2000);
+            _delay_ms(1000);
         }
         else if(temp>=710 && temp<=1024){         
             i=0;
@@ -70,7 +65,7 @@ void activity4_USARTWrite(uint16_t temp)
             UDR0 = data4[i];        // Put data into buffer, sends the data
             i++;
             }
-            _delay_ms(2000);
+            _delay_ms(1000);
         }
         else{      
             i=0;
@@ -79,7 +74,7 @@ void activity4_USARTWrite(uint16_t temp)
             UDR0 = data5[i];        // Put data into buffer, sends the data
             i++;
             }
-            _delay_ms(2000);
+            _delay_ms(1000);
             
         }
 }

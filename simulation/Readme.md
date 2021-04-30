@@ -6,4 +6,5 @@
 ## Activity 2
 |ADC both inputs are OFF|ADC both inputs are ON|
 |-----------------------|----------------------|
-|![](activity2_01.PNG)|![](activity2_11.PNG)|
+|![](activity2_01.PNG)|![](activity2_02.PNG)|
+## Activity 3

@@ -23,7 +23,7 @@
 /* Defining Port D0 as button*/
 #define BUTTON_SENSOR  (PORTD0)   
 
-/* Defining Port D1 for temperature sensor
+/* Defining Port D1 for temperature sensor*/
 #define TEMP_SENSOR  (PORTD1)   
 
  

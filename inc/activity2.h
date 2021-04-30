@@ -1,5 +1,4 @@
-#ifndef __ACTIVITY_2_H__
-#define __ACTIVITY_2_H__
+
 /**
  * @file activity2.h
  * @author Hemanth
@@ -10,27 +9,20 @@
  * @copyright Copyright (c) 2021
  * 
  */
-
-/**
- * Include files
- */ 
+#ifndef __ACTIVITY_2_H__
+#define __ACTIVITY_2_H__
+ 
 #include <util/delay.h>
 #include <avr/io.h>
 
 /**
- * Function Definitions
- */
-
-/**
- * @brief Initialize the registers for ADC setup
+ * @brief Initialize the  ADC setup
  * 
  */
 void InitADC();
 
 /**
- * @brief Gives the ADC values for the selected channel
  * 
- * @param[in] ch Channel number from 0-7
  * @return uint16_t ADC value
  */
 uint16_t ReadADC(uint8_t ch);

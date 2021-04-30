@@ -29,7 +29,7 @@ int USARTRead()
 }
 
 void activity4_USARTWrite(uint16_t temp)
-{
+{ 
     int i=0;
         if(temp>=0 && temp<=200){
             unsigned char data1[]="Temperature: 20 degree C\n";

@@ -4,3 +4,4 @@
 ### When both the switches are in high state
 ![](activity1_11.PNG)
 ## Activity 2
+l

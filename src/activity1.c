@@ -15,11 +15,8 @@
 
 void peripheral_init(void)
 {	
-	/* set PD2=1 for Led*/
-	DDRD |= (1<<PD2); 
-	/* Clear bit */
+	DDRD |= (1<<PD2); // set PD2=1 for LED
     DDRD &= ~(1<<PD0); //clear bit
-	/* Seat Button*/
     PORTD |= (1<<PD0); //set bit PD0 for SeatSwitch
     DDRD &= ~(1<<PD1); //clear bit
     PORTD |= (1<<PD1); //set bit PD0 for HeaterSwitch

@@ -18,7 +18,7 @@
 #define LED_PORT (PORTD)
 
 /* Defining Led pin*/
-#define LED_PIN  (PORTD2)   /**< LED Pin number  */
+#define LED_PIN  (PORTD2)   
 
 /* Defining Port D0 as button*/
 #define BUTTON_SENSOR  (PORTD0)   

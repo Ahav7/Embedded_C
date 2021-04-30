@@ -1,6 +1,6 @@
 /**
  * @file activity4.c
- * @author KaaviyaP (kaaviya2881999@gmail.com)
+ * @author Hemanth
  * @brief Functions to print the Temperature in Oscilloscope 
  * @version 0.1
  * @date 2021-04-27

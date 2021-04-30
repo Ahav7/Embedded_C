@@ -9,8 +9,8 @@
  * 
  */
 
-#include "activity2.h"
 #include "activity3.h"
+#include "activity2.h"
 
 void InitTimer()
 {
@@ -24,27 +24,23 @@ void activity3_PWM(uint16_t temp)
     InitTimer();
     if(temp>=0 && temp<=200){
             OCR1A = PWM_20_PERCENT;
-            _delay_ms(100);
+            _delay_ms(200);
         }
-    
         else if(temp>=210 && temp<=500){
              OCR1A = PWM_40_PERCENT;
-            _delay_ms(100);
+            _delay_ms(200);
         }
-    
         else if(temp>=510 && temp<=700){
              OCR1A = PWM_70_PERCENT;
-            _delay_ms(100);
+            _delay_ms(200);
         }
-    
         else if(temp>=710 && temp<=1024){
              OCR1A = PWM_95_PERCENT;
-            _delay_ms(100);
+            _delay_ms(200);
         }
-    
-        else
-        {
+        else{
             OCR1A=0;
-            _delay_ms(100);
+            _delay_ms(200);
         }
+
 }

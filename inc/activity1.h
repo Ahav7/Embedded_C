@@ -30,10 +30,7 @@
 #include <util/delay.h>
 #include <avr/io.h>
 
-/**
- * @brief Initialize all the Peripherals and pin configurations
- * 
- */
+/* Initializing peripherals*/
 void peripheral_init(void);
 
 /**

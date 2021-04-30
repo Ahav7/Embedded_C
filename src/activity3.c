@@ -1,9 +1,8 @@
 /**
  * @file activity3.c
- * @author Hemanth
- * @brief Functions to convert the ADC value to corresponding PWM 
+ * @author Hemanth 
  * @version 0.1
- * @date 2021-04-27
+ * @date 2021-04-28
  * 
  * @copyright Copyright (c) 2021
  * 
@@ -19,26 +18,36 @@ void InitTimer()
     DDRB |=(1<<PB1);
 }
 
+
 void activity3_PWM(uint16_t temp)
 {
     InitTimer();
-    if(temp>=0 && temp<=200){
+    //temperature conditions
+    if(temp>=0 && temp<=200)
+    {
             OCR1A = PWM_20_PERCENT;
             _delay_ms(200);
         }
-        else if(temp>=210 && temp<=500){
+    
+        else if(temp>=210 && temp<=500)
+        {
              OCR1A = PWM_40_PERCENT;
             _delay_ms(200);
         }
-        else if(temp>=510 && temp<=700){
+    
+        else if(temp>=510 && temp<=700)
+        {
              OCR1A = PWM_70_PERCENT;
             _delay_ms(200);
         }
+    
         else if(temp>=710 && temp<=1024){
              OCR1A = PWM_95_PERCENT;
             _delay_ms(200);
         }
-        else{
+    
+        else
+        {
             OCR1A=0;
             _delay_ms(200);
         }

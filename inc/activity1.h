@@ -57,4 +57,4 @@ void TurnLED_OFF();
  */
 int activity1_LED(void);
 
-#endif /* __ACTIVITY_1_H__ */
+#endif

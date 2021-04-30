@@ -1,7 +1,7 @@
 /**
  * @file activity2.c
  * @author Hemanth
- * @brief  to get the ADC values 
+ * @brief  to get  ADC values 
  * @version 0.1
  * @date 2021-04-28
  * 

@@ -14,31 +14,28 @@
 /**
  * Macro Definitions
  */
-#define PWM_20_PERCENT (205) /**< Output PWM for 20% duty cycle */
-#define PWM_40_PERCENT (410) /**< Output PWM for 40% duty cycle */
-#define PWM_70_PERCENT (717) /**< Output PWM for 70% duty cycle */
-#define PWM_95_PERCENT (973) /**< Output PWM for 95% duty cycle */
+// PWM 20%
+#define PWM_20_PERCENT (205) 
 
-/**
- * Include files
- */ 
+//PWM 40%
+#define PWM_40_PERCENT (410) 
+
+//PWM 70%
+#define PWM_70_PERCENT (717) 
+
+//PWM 95%
+#define PWM_95_PERCENT (973) 
+
+
 #include <util/delay.h>
 #include <avr/io.h>
 
-/**
- * Function Definitions
- */
 
-/**
- * @brief Initialize Timer1 registers 
- * 
- */
 void InitTimer();
 
 /**
- * @brief Produce duty cycle in PWM according to i/p ADC value
+ * @brief Duty cyvle for input adc
  * 
- * @param[in] temp The ADC value from activity2
  */
 void activity3_PWM(uint16_t temp);
 

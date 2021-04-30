@@ -1,6 +1,6 @@
 /**
  * @file activity2.c
- * @author KaaviyaP (kaaviya2881999@gmail.com)
+ * @author Hemanth
  * @brief Functions to get the ADC values 
  * @version 0.1
  * @date 2021-04-27

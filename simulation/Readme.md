@@ -8,3 +8,9 @@
 |-----------------------|----------------------|
 |![](activity2_01.PNG)|![](activity2_02.PNG)|
 ## Activity 3
+|PWM output at 20%|
+|-----------------|
+|![](activity3_20.PNG)|
+## Activity 4
+|Output Temperature at 33 degrees|
+|![](activity4_33.PNG)|

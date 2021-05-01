@@ -3,7 +3,7 @@
  * @author Hemanth
  * @brief Functions to print the Temperature in Oscilloscope 
  * @version 0.1
- * @date 2021-04-27
+ * @date 2021-04-29
  * 
  * @copyright Copyright (c) 2021
  * 
@@ -28,6 +28,7 @@ int USARTRead()
     return UDR0;
 }
 
+/* Writes the  values using UART on serial monitor */
 void activity4_USARTWrite(uint16_t temp)
 { 
     int i=0;
@@ -35,7 +36,8 @@ void activity4_USARTWrite(uint16_t temp)
             unsigned char data1[]="Temperature: 20 degree C\n";
             i=0;
             while(data1[i]!=0){
-             //  empty transmit buffer
+                
+             //  empty buffer
             while (!( UCSR0A & (1<<UDRE0)));  
             UDR0 = data1[i];        
             i++;
@@ -48,7 +50,7 @@ void activity4_USARTWrite(uint16_t temp)
             i=0;
             while(data2[i]!=0)
             {
-                // Wait for empty transmit buffer
+                //  empty  buffer
             while (!( UCSR0A & (1<<UDRE0)));  
             UDR0 = data2[i];        
             i++;
@@ -62,30 +64,35 @@ void activity4_USARTWrite(uint16_t temp)
             i=0;
             while(data3[i]!=0)
             {
-                // Wait for empty transmit buffer
+                //  empty buffer
             while (!( UCSR0A & (1<<UDRE0)));  
             UDR0 = data3[i];        
             i++;
             }
             _delay_ms(2000);
         }
+    
         else if(temp>=710 && temp<=1024)
         {         
             unsigned char data4[]="Temperature: 33 degree C\n";     
             i=0;
-            while(data4[i]!=0){
+            while(data4[i]!=0)
+            {
+                // empty buffer
             while (!( UCSR0A & (1<<UDRE0)));  
             UDR0 = data4[i];        
             i++;
             }
             _delay_ms(2000);
         }
+    
         else
         {
               unsigned char data5[]="Temperature: 0 degree C\n";
             i=0;
             while(data5[i]!=0)
             {
+                /* Empty buffer*/
             while (!( UCSR0A & (1<<UDRE0)));  
             UDR0 = data5[i];        
             i++;

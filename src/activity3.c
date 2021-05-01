@@ -11,6 +11,7 @@
 #include "activity3.h"
 #include "activity2.h"
 
+/*Timer iniatilisation */
 void InitTimer()
 {
     TCCR1A |= (1<<COM1A1)|(1<<WGM11)|(1<<WGM10);
@@ -22,6 +23,7 @@ void InitTimer()
 void activity3_PWM(uint16_t temp)
 {
     InitTimer();
+    
     //temperature conditions
     if(temp>=0 && temp<=200)
     {

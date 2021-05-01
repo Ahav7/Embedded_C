@@ -23,18 +23,22 @@ int main(void)
 	    /* Check if both switches are high*/
         if(activity1_LED()==1) 
         {
+		
             /*if switches are high then led is set to be high*/
             TurnLED_ON();
+		
 	    /* Get the ADC value*/
             temp=activity2_GetADC();
+		
 	    /* PWM based on the temperature*/
             activity3_PWM(temp); 
+		
 	   /* Using UART protocol to print temperature on srial monitor*/
             activity4_USARTWrite(temp);
             
 
         }
-	    /* If both the switches are not high led is in low state*/
+	    /* If both the switches are not high  */
         else  
         {
             TurnLED_OFF();

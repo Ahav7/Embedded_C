@@ -11,22 +11,26 @@
  * 
  */
 
-#define F_CPU 16000000UL 	/**< Clock Frequency of MCU is 16 MHz */
+#define F_CPU 16000000UL 	
 
-#define LED_PORT (PORTD)    /**< LED Port Number */
+/** LED Port Number */
+#define LED_PORT (PORTD)   
 
-#define LED_PIN  (PORTD2)   /**< LED Pin number  */
+/**< LED Pin Number */
+#define LED_PIN  (PORTD2)   
 
-#define BUTTON_SENSOR  (PORTD0)   /**< Port for Button Sensor  */
+/* Button*/
+#define BUTTON_SENSOR  (PORTD0)  
 
-#define TEMP_SENSOR  (PORTD1)   /**< Port for Temperature Sensor   */
+/*Temperature sensor*/
+#define TEMP_SENSOR  (PORTD1)
 
 #include <util/delay.h>
 #include <avr/io.h>
 
 
 /**
- * @brief Initialize all the Peripherals and pin configurations
+ * @brief peripheral initialize
  * 
  */
 void peripheral_init(void);

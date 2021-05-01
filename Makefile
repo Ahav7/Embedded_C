@@ -1,6 +1,8 @@
 PROJ_NAME = SeatHeatApp
 
+
 BUILD_DIR = Build
+
 
 # All Source code files
 SRC =SeatHeatingApp.c\
@@ -10,8 +12,11 @@ src/activity3.c\
 src/activity4.c\
 
 
+
+
 #Object copy to create hexfile
 OBJCOPY = avr-objcopy.exe
+
 
 #Avrdude
 AVRDUDE := avrdude

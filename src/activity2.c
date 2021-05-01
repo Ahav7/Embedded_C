@@ -10,13 +10,15 @@
 
 #include "activity2.h"
 
-
+/* Initializing ADC*/
 void InitADC()
 {
     ADMUX=(1<<REFS0);
     
     ADCSRA= (1<<ADEN)|(7<<ADPS0);
 }
+
+/* Reading ADC values*/
 
 uint16_t ReadADC(uint8_t ch)
 {

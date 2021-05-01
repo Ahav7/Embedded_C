@@ -16,12 +16,12 @@
 
 
 /**
- * @brief Initialize the registers for ADC setup
+ * @brief ADC setup
  * 
  */
 void InitADC();
 /**
- * @brief Gives the ADC values for  selected channel
+ * @brief Gives the ADC values 
  * 
  */
 uint16_t ReadADC(uint8_t ch);
